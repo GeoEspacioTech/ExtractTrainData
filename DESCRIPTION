@@ -8,7 +8,6 @@ Author: Subhadip Datta
 Maintainer: Subhadip Datta <subhadipdatta007@gmail.com>
 Description: By using a multispectral image and ESRI shapefile (Point/Polygon), a data table will be generated for classification or regression. The data table will be contained by band wise raster values and class ids.
 License: GPL-3
-BugReports: <https://github.com/SubhadipDatta/ExtractTrainData/issues>
 Repository: CRAN
 Depends:raster,rgdal, sp
 Imports: rgeos
