@@ -3,7 +3,7 @@ Package: ExtractTrainData
 Type: Package
 Title: Extract Values from Raster
 Version: 5.1.5
-Date: 2019-06-2020
+Date: 2020-06-19
 Author: Subhadip Datta
 Maintainer: Subhadip Datta <subhadipdatta007@gmail.com>
 Description: By using a multispectral image and ESRI shapefile (Point/Polygon), a data table will be generated for classification or regression. The data table will be contained by band wise raster values and class ids.
