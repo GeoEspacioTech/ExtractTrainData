@@ -18,8 +18,19 @@
 #' @export
 
 ExtractByLine<-function(img,line.shp,In.colName,Out.colName){
-  ltr<-rasterize(line.shp,img)
-  rtp<-rasterToPoints(ltr,spatial = T)
+  line.shp[[In.colName]]<-as.integer(line.shp[[In.colName]])
+  val<-unique(line.shp[[In.colName]])
+  ltrl<-c()
+  for(i in unique(val)){
+    ltr<-rasterize(line.shp[line.shp[[In.colName]]==val[i],],img,field=i)
+    ltrl<-append(ltrl,ltr)
+  }
+  ltrl<-sum(stack(ltrl),na.rm=T)
+  ltrl[ltrl==0]<-NA
+  rtp<-rasterToPoints(ltrl,spatial = T)
   ev<-ExtractByPoint(img,rtp,"layer",Out.colName)
   return(ev)
 }
+
+
+
