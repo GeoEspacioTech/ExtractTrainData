@@ -24,7 +24,7 @@ library(ExtractTrainData)
 img<-brick(system.file("extdata","ras.tif",package = "ExtractTrainData"))
 line.shp<-shapefile(system.file("extdata","lines.shp",package = "ExtractTrainData"))
 Out.colName<-In.colName<-"Id"
-ExtractByPoly(img,line.shp,In.colName,Out.colName)
+ExtractByLine(img,line.shp,In.colName,Out.colName)
 }
 \author{
 Subhadip Datta

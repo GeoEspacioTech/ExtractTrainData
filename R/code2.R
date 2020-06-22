@@ -13,7 +13,7 @@
 #' img<-brick(system.file("extdata","ras.tif",package = "ExtractTrainData"))
 #' point.shp<-shapefile(system.file("extdata","poin.shp",package = "ExtractTrainData"))
 #' Out.colName<-In.colName<-"Id"
-#' ExtractByPoint(img,point.shp,In.colName)
+#' ExtractByPoint(img,point.shp,In.colName,Out.colName)
 #' @export
 
 ExtractByPoint<-function(img,point.shp,In.colName,Out.colName){
